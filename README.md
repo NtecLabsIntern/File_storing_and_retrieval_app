@@ -6,4 +6,4 @@
  - Have a preview of the files you've stored.
  - File listing.
  - File deletion.
- - File sharing
+ - File sharing.
