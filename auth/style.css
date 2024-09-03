@@ -144,7 +144,7 @@ img{
 
 
 #validation_box{
-    display: block;
+    display: none;
     margin: 20px;
     padding: 1px;
     margin-top: -30px;
