@@ -47,6 +47,8 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <title>SignUp | File storage app</title>
@@ -72,8 +74,19 @@ if(isset($_POST['submit'])){
                         </div>
                         <div class="input-field">
                             <label for="">PASSWORD:</label><br>
-                            <input type="password"  name="password" class="input px-1"  id="password" required>
+                            <input type="password"  name="password" class="input px-1"  id="psw" required>
+                            <span toggle="#psw" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                         </div>
+
+                        <div id="validation_box">
+                            <h6>Password must contain the following</h6>
+                            <p id="letter" class="invalid">Lowercase Letters</p>
+                            <p id="capital" class="invalid">Uppercase Letters</p>
+                            <p id="number" class="invalid">A number</p>
+                            <p id="length" class="invalid">At least 8 character</p>
+                        </div>
+
+
                         <div class="input-field">
                             <label for="">GENDER: </label>
                             <input type="radio" name="gender" id="male" class="form-check-input" value="male">
@@ -93,7 +106,7 @@ if(isset($_POST['submit'])){
 
     </div>
  
-    
+   <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
